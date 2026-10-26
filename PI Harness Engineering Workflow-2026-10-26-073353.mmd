@@ -1,0 +1,20 @@
+flowchart TB
+    ROOT["PI / Harness / Claude / VS Code"] --> LIB["3D Library"] & CT["CT1 / CT2 / CT3 / CT4 Identification"] & SKILLS["Skills"] & DOC["PB / Documentation"] & SCENARIO["Scenario Creation"] & MODEL["3D Model"] & KNOW["Context / Knowledge Assistant"] & MECH["Mechanical Output"]
+    LIB --> GEN["3D Model Generation"]
+    GEN --> MODEL
+    MODEL --> REVIEW["Code Review"] & USER["User Check"] & VERIFY["Verification & Testing"] & MECH
+    VERIFY --> COVERAGE["Coverage"] & DVT["DVT"]
+    KM["KM Matrix"] <--> KNOW
+    LAM["LAM DB Enterprise"] <--> KNOW
+    ZUKEN["Zuken"] <--> KNOW
+    NWF["NWF"] <--> KNOW
+    KNOW --> COMP["Components / Hardware"] & DOCS["Documentation"]
+    CT --> TEST["Test Case Identification"]
+    TEST --> EXEC["Test Execution"]
+    EXEC --> VERIFY
+    SKILLS --> SCENARIO & DOC
+    MECH --> OUTPUT["Output / Results"]
+    DOC --> OUTPUT
+    REVIEW --> OUTPUT
+    COVERAGE --> OUTPUT
+    DVT --> OUTPUT
